@@ -1,0 +1,115 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    }
+    
+    .wrapper{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    
+    
+    
+    }
+    
+    
+    .pingpong{
+    
+    width: 1350px;
+    height: 600px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    }
+    .pingpong:before{
+    content: '';
+        width: 40px;
+        height: 300px;
+        background-color: yellow;
+        position: absolute;
+    left: 0.5%;
+    top: 0.5%;
+    
+    animation: before 4s infinite linear;
+    
+    }
+    
+    @keyframes before {
+    
+        0%{top: 0.5%;}
+        25%{top: 30%;}
+        50%{top: 50%}
+        75%{top: calc(100%-80px);}
+        100%{top: 0;}
+        
+    }
+    
+    
+        
+    .pingpong:after{
+    content: '';
+        width: 40px;
+        height: 300px;
+        background-color: yellow;
+        position: absolute;
+    right: 0.5%;
+    bottom: 0.5%;
+    
+    animation: after 4s infinite linear;
+    
+    }
+    
+    @keyframes after {
+    
+        0%{bottom: 0.5%;}
+        25%{bottom: 30%;}
+        50%{bottom: 50%}
+        75%{bottom: calc(100%-80px);}
+        100%{bottom: 0;}
+        
+    }
+    
+    
+    .ball{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: blue;
+        position: absolute;
+        animation: ball 4s infinite linear;
+    }
+        
+    @keyframes ball{
+    
+    0%{left: 50%;}
+    25%{
+        left: 50px;
+    }
+    
+    50%{
+        left: 50%;
+       
+    }
+    
+    74%{
+        left: 93%;
+       
+    }
+    100%{
+        left: 50%;
+    }
+    
+    
+    }
+    
